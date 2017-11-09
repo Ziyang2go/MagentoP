@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="checkout_cart_product_add_after">
+        <observer name="exocortex_claraconfigurator_checkout_cart_product_add_after" instance="Exocortex\ClaraConfigurator\Observer\CheckoutCartProductAddAfterObserver" />
+    </event>
+    <event name="sales_model_service_quote_submit_before">
+        <observer name="exocortex_claraconfigurator_sales_model_service_quote_submit_before" instance="Exocortex\ClaraConfigurator\Observer\SalesModelServiceQuoteSubmitBeforeObserver" />
+    </event>
+    <event name="layout_load_before">
+        <observer name="exocortex_claraconfigurator_layout_load_before" instance="Exocortex\ClaraConfigurator\Observer\LayoutLoadBeforeObserver" />
+    </event>
+</config>

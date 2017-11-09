@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Exocortex, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+  <head>
+    <css src="Exocortex_ClaraConfigurator::css/main.css"/>
+  </head>
+  <body>
+    <attribute name="class" value="page-product-bundle"/>
+    <referenceContainer name="content">
+      <referenceContainer name="product.info.main" remove="true"/>
+
+      <block class="Exocortex\ClaraConfigurator\Block\BundleClaraConfigurator" name="product.info.threekit.configurator" template="Exocortex_ClaraConfigurator::ThreekitConfigurator.phtml" before="product.info.media"/>
+
+      <referenceContainer name="product.info.media">
+        <referenceBlock name="product.info.media.image" remove="true"/>
+      </referenceContainer>
+    </referenceContainer>
+  </body>
+</page>
